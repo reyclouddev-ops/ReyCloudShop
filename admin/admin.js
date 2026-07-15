@@ -44,3 +44,60 @@ alert(
 
 
 }
+async function login(){
+
+
+let data={
+
+username:
+username.value,
+
+password:
+password.value
+
+};
+
+
+
+let res =
+await fetch("/api/auth/login",{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:
+JSON.stringify(data)
+
+});
+
+
+let json =
+await res.json();
+
+
+
+if(json.token){
+
+
+localStorage.setItem(
+"adminToken",
+json.token
+);
+
+
+location.href="dashboard.html";
+
+
+}else{
+
+
+alert(json.message);
+
+
+}
+
+
+}
