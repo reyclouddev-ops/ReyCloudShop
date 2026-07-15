@@ -2,6 +2,18 @@
 Checkout ReyCloudShop
 </h1>
 
+<h2>
+🎮 Data Roblox
+</h2>
+
+
+<input id="roblox"
+placeholder="Username Roblox">
+
+
+<button onclick="checkout()">
+Buat Pesanan
+</button>
 
 <input id="nama"
 placeholder="Nama">
@@ -45,14 +57,18 @@ produk.value,
 
 
 price:
-Number(harga.value)
+Number(harga.value),
 
+
+robloxUsername:
+roblox.value
 
 
 };
 
 
 
+  
 let res =
 await fetch("/api/orders",{
 
