@@ -1,0 +1,92 @@
+<h1>
+Checkout ReyCloudShop
+</h1>
+
+
+<input id="nama"
+placeholder="Nama">
+
+
+<input id="wa"
+placeholder="WhatsApp">
+
+
+<input id="produk"
+placeholder="Produk">
+
+
+<input id="harga"
+placeholder="Harga">
+
+
+<button onclick="checkout()">
+Pesan
+</button>
+
+
+<script>
+
+async function checkout(){
+
+
+let data={
+
+
+customerName:
+nama.value,
+
+
+whatsapp:
+wa.value,
+
+
+product:
+produk.value,
+
+
+price:
+Number(harga.value)
+
+
+
+};
+
+
+
+let res =
+await fetch("/api/orders",{
+
+
+method:"POST",
+
+
+headers:{
+
+
+"Content-Type":
+"application/json"
+
+
+},
+
+
+body:
+JSON.stringify(data)
+
+
+});
+
+
+let json =
+await res.json();
+
+
+
+alert(
+"Order berhasil dibuat"
+);
+
+
+}
+
+</script>
