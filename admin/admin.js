@@ -214,3 +214,31 @@ Hapus
 
 
 loadProduct();
+async function loadStats(){
+
+
+let res =
+await fetch("/api/stats");
+
+
+let data =
+await res.json();
+
+
+
+product.innerHTML =
+data.products;
+
+
+order.innerHTML =
+data.orders;
+
+
+paid.innerHTML =
+data.paid;
+
+
+}
+
+
+loadStats();
