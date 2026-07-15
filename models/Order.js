@@ -54,6 +54,16 @@ paymentProof:{
 whatsappAdmin:{
     type:String,
     default:"6281260512743"
+}, 
+
+    invoiceId:{
+    type:String,
+    unique:true
+},
+
+invoiceStatus:{
+    type:String,
+    default:"unpaid"
 }
 
 },{
