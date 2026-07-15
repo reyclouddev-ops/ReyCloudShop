@@ -44,8 +44,17 @@ paymentStatus:{
 orderStatus:{
     type:String,
     default:"waiting"
-}
+}, 
+    
+paymentProof:{
+    type:String,
+    default:null
+},
 
+whatsappAdmin:{
+    type:String,
+    default:"6281260512743"
+}
 
 },{
 timestamps:true
