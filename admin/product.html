@@ -47,9 +47,23 @@ placeholder="Nama Produk">
 <input id="price"
 placeholder="Harga">
 
-image:{
-type:String
-}
+<div class="product">
+
+<img src="${p.image}">
+
+<h2>
+${p.name}
+</h2>
+
+<p>
+Rp${p.price}
+</p>
+
+<button>
+Beli
+</button>
+
+</div>
 
 <button onclick="addProduct()">
 
