@@ -17,7 +17,9 @@ description:String,
 
 price:Number,
 
-image:String,
+image:{
+type:String
+}
 
 
 // khusus Roblox
