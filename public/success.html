@@ -13,3 +13,30 @@ Silakan bayar lalu kirim bukti:
 📱 Kirim Bukti WhatsApp
 
 </a>
+if(order.paymentStatus==="paid"){
+
+
+if(order.category==="Robux" ||
+order.category==="GamePass"){
+
+
+show(`
+
+🎮 Pesanan Roblox
+
+Silakan Add Friend:
+
+${order.robloxUsername}
+
+
+<a href="${order.robloxLink}">
+Add Friend
+</a>
+
+
+`);
+
+}
+
+
+}
