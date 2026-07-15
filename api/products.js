@@ -35,7 +35,51 @@ success:true,
 product
 });
 
+// edit produk
 
+router.put("/:id", async(req,res)=>{
+
+const product =
+await Product.findByIdAndUpdate(
+req.params.id,
+req.body,
+{
+new:true
+}
+);
+
+
+res.json({
+success:true,
+product
+});
+
+
+});
+
+
+
+// hapus produk
+
+router.delete("/:id", async(req,res)=>{
+
+
+await Product.findByIdAndDelete(
+req.params.id
+);
+
+
+res.json({
+
+success:true,
+
+message:"Produk dihapus"
+
+});
+
+
+});
+  
 }catch(e){
 
 res.status(500).json({
