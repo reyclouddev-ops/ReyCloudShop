@@ -64,6 +64,16 @@ whatsappAdmin:{
 invoiceStatus:{
     type:String,
     default:"unpaid"
+}, 
+
+    trackingCode:{
+    type:String,
+    unique:true
+},
+
+note:{
+    type:String,
+    default:""
 }
 
 },{
